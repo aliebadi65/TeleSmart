@@ -214,6 +214,7 @@ function create_config( )
     enabled_plugins = {
 	"admin",
     "onservice",
+    "plugins",
     "inrealm",
     "ingroup",
     "inpm",
@@ -232,32 +233,26 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {215146724,202002315,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v4
+    about_text = [[Smart V4
 An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/SEEDTEAM/TeleSeed
+Server:Nederland,Amesterdam Advence Server
 
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
+Sudo And Configure
+@GrayHatP (Erpokan Smart)
+(Pouya Poorrahman)
 
 Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
+Sina Sardar Mafiya
+Sing King NaboodGaran
+Erpokan Smart Erfan
+Mahdi King BlackGard
 
-Our channels
-@teleseedch [English]
-@iranseed [persian]
+Our channel
+@smartu4 [English][persian]
 
-Our website 
-http://teleseed.seedteam.org/
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -343,7 +338,7 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
+Smart Commands list :
 
 !kick [username|id]
 You can also do it by reply
@@ -462,13 +457,15 @@ will return group ban list
 
 **You can use "#", "!", or "/" to begin all commands
 
-
 *Only owner and mods can add bots in group
-
 
 *Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
 *Only owner can use res,setowner,promote,demote and log commands
+
+*Smart V4 written in lua By ErPoKan Smart
+
+*Sudo:@GrayHatP
 
 ]],
 	help_text_super =[[
@@ -605,13 +602,15 @@ Returns group logs
 
 **You can use "#", "!", or "/" to begin all commands
 
-*Only owner can add members to SuperGroup
-(use invite link to invite)
+*Only owner and mods can add bots in group
 
-*Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
+*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
-*Only owner can use res, setowner, promote, demote, and log commands
+*Only owner can use res,setowner,promote,demote and log commands
 
+*Smart V4 written in lua By ErPoKan Smart
+
+*Sudo:@GrayHatP
 ]],
   }
   serialize_to_file(config, './data/config.lua')
