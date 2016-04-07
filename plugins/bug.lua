@@ -96,8 +96,8 @@ return {
   description = "Lookup bugzilla status update",
   usage = "/bot bugzilla [bug number]",
   patterns = {
-    "^bugzilla (status) (.*)$",
-    "^bugzilla (list) (.*)$"
+    "^!bugzilla (status) (.*)$",
+    "^!bugzilla (list) (.*)$"
   }, 
   run = run
 }
