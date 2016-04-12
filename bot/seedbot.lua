@@ -233,25 +233,19 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {215146724,202002315,0,tonumber(our_id)},--Sudo users
+    sudo_users = {181198158,207958550,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Smart V4
+    about_text = [[Black Wolf
 An advanced administration bot based on TG-CLI written in Lua
 
 Server:Nederland,Amesterdam Advence Server
 
-Sudo And Configure
+Sudo
+@XOX_BOM_BOM_BENI_SBW_XOX
+(Benyamin)
+Canfigore
 @GrayHatP (Erpokan Smart)
 (Pouya Poorrahman)
-
-Special thanks to
-Sina Sardar Mafiya
-Sing King NaboodGaran
-Erpokan Smart Erfan
-Mahdi King BlackGard
-
-Our channel
-@smartu4 [English][persian]
 
 ]],
     help_text_realm = [[
@@ -463,154 +457,145 @@ will return group ban list
 
 *Only owner can use res,setowner,promote,demote and log commands
 
-*Smart V4 written in lua By ErPoKan Smart
+*written in lua By ErPoKan Smart
 
-*Sudo:@GrayHatP
+*sudo: @XOX_BOM_BOM_BENI_SBW_XOX
 
 ]],
 	help_text_super =[[
-SuperGroup Commands:
+»SuperGroup Commands For Owner:
 
 !info
-Displays general info about the SuperGroup
+〉دریات اطلاعات گروه
 
 !admins
-Returns SuperGroup admins list
+〉لیست ادمین های تک ستاره
 
 !owner
-Returns group owner
+〉ایدی صاحب گروه
 
 !modlist
-Returns Moderators list
+〉لیست ادمین های دو ستاره
 
 !bots
-Lists bots in SuperGroup
+〉لیست ربات ها
 
 !who
-Lists all users in SuperGroup
+〉لیست کاربران
 
 !block
-Kicks a user from SuperGroup
-*Adds user to blocked list*
+〉اخراج فرد با ریپلای
 
 !ban
-Bans user from the SuperGroup
+〉بن کردن فرد
 
 !unban
-Unbans user from the SuperGroup
+〉حذف بن فرد
 
 !id
-Return SuperGroup ID or user id
-*For userID's: !id @username or reply !id*
+〉دریافت ایدی گروه یا فردی
 
 !id from
-Get ID of user message is forwarded from
+〉دریافت ایدی کاربر با فوروارد
 
 !kickme
-Kicks user from SuperGroup
-*Must be unblocked by owner or use join by pm to return*
+〉خروج از گروه
 
 !setowner
-Sets the SuperGroup owner
+〉انتخاب صاحب گروه
+
+!setadmin
+〉ترفیع به مقام ادمین تک ستاره
+*ادمین های تک ستاره در لیست ادمین های گروه قرار میگیرند
+
+!demoteadmin
+〉حذف از مقام ادمین تک ستاره
 
 !promote [username|id]
-Promote a SuperGroup moderator
+〉ترفیع به مقام ادمین دو ستاره
+*ادمین های دو ستاره داخل لیست ادمین ها قرار نمیگیرند ولی ربات به دستورات آن ها گوش میدهد
 
 !demote [username|id]
-Demote a SuperGroup moderator
+〉حذف از مقام ادمین دو ستاره
 
 !setname
-Sets the chat name
+〉تنظیم اسم گروه
 
 !setphoto
-Sets the chat photo
+〉تنظیم عکس گروه
 
 !setrules
-Sets the chat rules
+〉تنظیم قوانین گروه
 
 !setabout
-Sets the about section in chat info(members list)
+〉تنظیم موضوع گروه
 
 !save [value] <text>
-Sets extra info for chat
+〉ذخیره متن
 
 !get [value]
-Retrieves extra info for chat by value
+〉دریافت متن های سیو شده
 
 !newlink
-Generates a new group link
+〉ساخت لینک جدید
 
 !link
-Retireives the group link
+〉دریافت لینک گروه
 
 !rules
-Retrieves the chat rules
+〉دریافت قوانین گروه
 
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Lock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: enable strict settings enforcement (violating user will be kicked)*
+!lock
+[links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+〉قفل کردن تنظیمات گروه
 
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Unlock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: disable strict settings enforcement (violating user will not be kicked)*
+ !unlock
+[links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+〉باز کردن تنظیمات گروه
 
-!mute [all|audio|gifs|photo|video|service]
-mute group message types
-*A "muted" message type is auto-deleted if posted
+!mute
+[all|audio|gifs|photo|video|service]
+〉موت کردن
 
-!unmute [all|audio|gifs|photo|video|service]
-Unmute group message types
-*A "unmuted" message type is not auto-deleted if posted
+!unmute
+[all|audio|gifs|photo|video|service]
+〉بازکردن موارد موت شده
 
 !setflood [value]
-Set [value] as flood sensitivity
+〉تنظیم حساسیت به اسپم
 
 !settings
-Returns chat settings
+〉دریافت تنظیمات گروه
 
 !muteslist
-Returns mutes for chat
+دریافت لیست  فایل های موت شده
 
 !muteuser [username]
-Mute a user in chat
-*If a muted user posts a message, the message is deleted automaically
-*only owners can mute | mods and owners can unmute
+〉موت کردن فرد
+ *فرد موت شده هر پیامی ارسال کند پیام بلا فاصله پاک میشه
+*برای حذف موت فرد موت شده از همین دستور استفاده کنید
 
 !mutelist
-Returns list of muted users in chat
+〉لیست افراد موت شده
 
 !banlist
-Returns SuperGroup ban list
+〉لیست افراد بن شده
 
-!clean [rules|about|modlist|mutelist]
+!clean
+[rules|about|modlist|mutelist]
+〉پاک کردن گذینه های بالا
 
 !del
-Deletes a message by reply
+〉حذف پیام در گروه با ریپلای
 
 !public [yes|no]
-Set chat visibility in pm !chats or !chatlist commands
+〉تنظیم عمومی بودن گروه
 
 !res [username]
-Returns users name and id by username
+〉دریافت نام و ایدی کاربر با نام کاربری
 
 
-!log
-Returns group logs
-*Search for kick reasons using [#RTL|#spam|#lockmember]
-
-**You can use "#", "!", or "/" to begin all commands
-
-*Only owner and mods can add bots in group
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
-
-*Smart V4 written in lua By ErPoKan Smart
-
-*Sudo:@GrayHatP
+*sudo: @XOX_BOM_BOM_BENI_SBW_XOX
 ]],
   }
   serialize_to_file(config, './data/config.lua')
