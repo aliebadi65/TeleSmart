@@ -235,18 +235,20 @@ function create_config( )
     },
     sudo_users = {181198158,207958550,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Black Wolf
+    about_text = [[Smart 2
 An advanced administration bot based on TG-CLI written in Lua
 
 Server:Nederland,Amesterdam Advence Server
+CPU:1Core RAM:1024MB HDD:50GB
+THIS IS FASTER
 
-Sudo
-@XOX_BOM_BOM_BENI_SBW_XOX
-(Benyamin)
-Canfigore
-@GrayHatP (Erpokan Smart)
-(Pouya Poorrahman)
+Sudo and Configure
+@GrayHatP
+(ERPOKAN SMART[PouyaPoorrahman])
 
+Channel: @smartu4ch
+Smart Helper: @smartU4Helper_bot
+Smart AntiSpam: @AntiSpamSmart
 ]],
     help_text_realm = [[
 Realm Commands:
