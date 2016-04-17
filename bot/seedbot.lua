@@ -235,22 +235,24 @@ function create_config( )
     },
     sudo_users = {202002315,215146724,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Smart 2
+    about_text = [[Anti Spam Smart Version 5.1
 An advanced administration bot based on TG-CLI written in Lua
-
+======================================
 Server:Nederland,Amesterdam Advence Server
 CPU:1Core RAM:1024MB HDD:50GB
-THIS IS FASTER
-
+======================================
 Sudo and Configure
 @GrayHatP
 (ERPOKAN SMART[PouyaPoorrahman])
-
+Sudo 2
+@GrayHatSi
+(Sina Sardar Mafia)
+======================================
 Channel: @smartu4ch
 Smart Helper: @smartU4Helper_bot
-Smart AntiSpam: @AntiSpamSmart
+Smart 2: @AntiSpamSmart2
 ]],
-    help_text_realm = [[
+       help_text_realm = [[
 Realm Commands:
 
 !creategroup [Name]
@@ -334,143 +336,279 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-SEND /superhelp TO @AntiSpamSmart PV
+Commands list :
+
+!kick [username|id]
+You can also do it by reply
+
+!ban [ username|id]
+You can also do it by reply
+
+!unban [id]
+You can also do it by reply
+
+!who
+Members list
+
+!modlist
+Moderators list
+
+!promote [username]
+Promote someone
+
+!demote [username]
+Demote someone
+
+!kickme
+Will kick user
+
+!about
+Group description
+
+!setphoto
+Set and locks group photo
+
+!setname [name]
+Set group name
+
+!rules
+Group rules
+
+!id
+return group id or user id
+
+!help
+Returns help text
+
+!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+Lock group settings
+*rtl: Kick user if Right To Left Char. is in name*
+
+!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+Unlock group settings
+*rtl: Kick user if Right To Left Char. is in name*
+
+!mute [all|audio|gifs|photo|video]
+mute group message types
+*If "muted" message type: user is kicked if message type is posted 
+
+!unmute [all|audio|gifs|photo|video]
+Unmute group message types
+*If "unmuted" message type: user is not kicked if message type is posted 
+
+!set rules <text>
+Set <text> as rules
+
+!set about <text>
+Set <text> as about
+
+!settings
+Returns group settings
+
+!muteslist
+Returns mutes for chat
+
+!muteuser [username]
+Mute a user in chat
+*user is kicked if they talk
+*only owners can mute | mods and owners can unmute
+
+!mutelist
+Returns list of muted users in chat
+
+!newlink
+create/revoke your group link
+
+!link
+returns group link
+
+!owner
+returns group owner id
+
+!setowner [id]
+Will set id as owner
+
+!setflood [value]
+Set [value] as flood sensitivity
+
+!stats
+Simple message statistics
+
+!save [value] <text>
+Save <text> as [value]
+
+!get [value]
+Returns text of [value]
+
+!clean [modlist|rules|about]
+Will clear [modlist|rules|about] and set it to nil
+
+!res [username]
+returns user id
+"!res @username"
+
+!log
+Returns group logs
+
+!banlist
+will return group ban list
+
+**You can use "#", "!", or "/" to begin all commands
+
+
+*Only owner and mods can add bots in group
+
+
+*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+
+*Only owner can use res,setowner,promote,demote and log commands
 
 ]],
 	help_text_super =[[
-»SuperGroup Commands For Owner:
+ستورات سوپر گروه بات اسمارت:
 
 !info
-〉دریات اطلاعات گروه
+>نشان دادن اطلاعت گروه
 
 !admins
-〉لیست ادمین های تک ستاره
+>نشان دادن ادمین ها
 
 !owner
-〉ایدی صاحب گروه
+>نشان دادن صاحب گروه
 
 !modlist
-〉لیست ادمین های دو ستاره
+>نشان دادن مدهای گروه
 
 !bots
-〉لیست ربات ها
+>نشان دادن بات های گروه
 
 !who
-〉لیست کاربران
+>نشان دادن لیست افراد در گروه
 
 !block
-〉اخراج فرد با ریپلای
+>حذف یک کاربر ازسوپر گروه
+*افزودن به کاربر به لیست مسدود شده ها*
 
 !ban
-〉بن کردن فرد
+>بن کردن فرد از گروه
 
 !unban
-〉حذف بن فرد
+>انبن کردن فرد از گروه
 
 !id
-〉دریافت ایدی گروه یا فردی
+>نشان دادن ایدی گروه و ایدی فرد
+*برای ای دی فرد: !id @username یا ریپلای !id*
 
 !id from
-〉دریافت ایدی کاربر با فوروارد
+>نشان دادن ای دی فردی که پیام ازاوفروارد شده
 
 !kickme
-〉خروج از گروه
+>کیک کردن خودتا از سوپر گروه
+*باید توسط صاحب گروه انبلاک شوید یا با پیام جوین برگردید*
 
 !setowner
-〉انتخاب صاحب گروه
-
-!setadmin
-〉ترفیع به مقام ادمین تک ستاره
-*ادمین های تک ستاره در لیست ادمین های گروه قرار میگیرند
-
-!demoteadmin
-〉حذف از مقام ادمین تک ستاره
+>تنظیم صاحب گروه
 
 !promote [username|id]
-〉ترفیع به مقام ادمین دو ستاره
-*ادمین های دو ستاره داخل لیست ادمین ها قرار نمیگیرند ولی ربات به دستورات آن ها گوش میدهد
+>ارتقا یک فرد به مد
 
 !demote [username|id]
-〉حذف از مقام ادمین دو ستاره
+>تنزل یک فرد به یوزر
 
 !setname
-〉تنظیم اسم گروه
+>تنظیم نام گروه
 
 !setphoto
-〉تنظیم عکس گروه
+>تنظیم عکس گروه
 
 !setrules
-〉تنظیم قوانین گروه
+>تنظیم قوانین گروه
 
 !setabout
-〉تنظیم موضوع گروه
+>(تنظیم درباره گروه(در لیست اعضا
 
 !save [value] <text>
-〉ذخیره متن
+>تنظیم متن برای مقداری خاص
 
 !get [value]
-〉دریافت متن های سیو شده
+>دریافت متن از ارسال مقدار
 
 !newlink
-〉ساخت لینک جدید
+>ساخت لینک جدید
 
 !link
-〉دریافت لینک گروه
+>دریافت لینک گروه
 
 !rules
-〉دریافت قوانین گروه
+>دریافت قوانین
 
-!lock
-[links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-〉قفل کردن تنظیمات گروه
+!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+>قفل تنظیمات گروه
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: enable strict settings enforcement (violating user will be kicked)*
 
- !unlock
-[links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-〉باز کردن تنظیمات گروه
+!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+>بازکردن تنظیمات گروه
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: disable strict settings enforcement (violating user will not be kicked)*
 
-!mute
-[all|audio|gifs|photo|video|service]
-〉موت کردن
+!mute [all|audio|gifs|photo|video|service]
+>قفل مواد ارسالی کاربران
+*A "muted" message type is auto-deleted if posted
 
-!unmute
-[all|audio|gifs|photo|video|service]
-〉بازکردن موارد موت شده
+!unmute [all|audio|gifs|photo|video|service]
+>بازکردن مواد ارسالی کاربران
+*A "unmuted" message type is not auto-deleted if posted
 
 !setflood [value]
-〉تنظیم حساسیت به اسپم
+>تنظیم مقدار حساسیت اسپم
 
 !settings
-〉دریافت تنظیمات گروه
+>دریافت تنظیمات گروه
 
 !muteslist
-دریافت لیست  فایل های موت شده
+>دریافت مواد قفل شده در گروه
 
 !muteuser [username]
-〉موت کردن فرد
- *فرد موت شده هر پیامی ارسال کند پیام بلا فاصله پاک میشه
-*برای حذف موت فرد موت شده از همین دستور استفاده کنید
+>خفه کردن یک فرد در گروه
+*اگر یک فرد خفه شود تمام پست های او به طور خودکار حذف خواهد شد
+*تنها صاحابان گروه توانای این کارند 
 
 !mutelist
-〉لیست افراد موت شده
+>دریافت لیست کاربران خفه شده
 
 !banlist
-〉لیست افراد بن شده
+>دریافت لیست بن شده گروه
 
-!clean
-[rules|about|modlist|mutelist]
-〉پاک کردن گذینه های بالا
+!clean [rules|about|modlist|mutelist]
+>پاک کردن تنظیمات به طور کلی
 
 !del
-〉حذف پیام در گروه با ریپلای
+>حذف یک پیام توسط ریپلای
 
 !public [yes|no]
-〉تنظیم عمومی بودن گروه
+تنظیم نمایش پی ام با !chats یا !chatlist دستورات
 
 !res [username]
-〉دریافت نام و ایدی کاربر با نام کاربری
+>دریافت نام و یوزر فرد
 
 
-*sudo: @XOX_BOM_BOM_BENI_SBW_XOX
+!log
+>دریافت ورود و خروج های یک گروه
+*Search for kick reasons using [#RTL|#spam|#lockmember]
+
+**شما میتوانید برای تمامی دستورات از "/" و "!" و "#"استفاده کنید
+
+*تنها صاحبان گروه میتوانند ممبر اد کنند
+(بااستفاده از لینک گروه)
+
+*صاحبان گروه تنها میتوانند دستورات اصلی را اجرا کنند
+
+*سازنده و کانفیگور
+@GrayHatP (ErPoKan Smart)
+
+*سازنده دوم و امور اداری
+@GrayHatSi
 ]],
   }
   serialize_to_file(config, './data/config.lua')
