@@ -233,7 +233,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {181198158,207958550,0,tonumber(our_id)},--Sudo users
+    sudo_users = {202002315,215146724,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Smart 2
 An advanced administration bot based on TG-CLI written in Lua
