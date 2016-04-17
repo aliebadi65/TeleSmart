@@ -91,10 +91,10 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'blackwolf' then -- Put everything you like :)
+  if matches[1]:lower() == 'smart2' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /blackwolf ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used /smart2 ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
@@ -143,8 +143,8 @@ return {
     "^[#!/]([Ss]tats)$",
     "^[#!/]([Ss]tatslist)$",
     "^[#!/]([Ss]tats) (group) (%d+)",
-    "^[#!/]([Ss]tats) (blackwolf)",
-	"^[#!/]([Bb]lackwolf)"
+    "^[#!/]([Ss]tats) (smart2)",
+	"^[#!/]([Ss]mart2)"
     }, 
   run = run
 }
