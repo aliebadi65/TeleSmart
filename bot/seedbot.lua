@@ -235,22 +235,19 @@ function create_config( )
     },
     sudo_users = {202002315,215146724,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Anti Spam Smart Version 5.1
+    about_text = [[Anti Spam Version 2.1
 An advanced administration bot based on TG-CLI written in Lua
-======================================
+==================
 Server:Nederland,Amesterdam Advence Server
 CPU:1Core RAM:1024MB HDD:50GB
-======================================
+=================
 Sudo and Configure
 @GrayHatP
 (ERPOKAN SMART[PouyaPoorrahman])
 Sudo 2
-@GrayHatSi
-(Sina Sardar Mafia)
-======================================
-Channel: @smartu4ch
-Smart Helper: @smartU4Helper_bot
-Smart 2: @AntiSpamSmart2
+@
+()
+=================
 ]],
        help_text_realm = [[
 Realm Commands:
@@ -465,7 +462,7 @@ will return group ban list
 
 ]],
 	help_text_super =[[
-ستورات سوپر گروه بات اسمارت:
+دستورات سوپر گروه:
 
 !info
 >نشان دادن اطلاعت گروه
@@ -604,11 +601,6 @@ will return group ban list
 
 *صاحبان گروه تنها میتوانند دستورات اصلی را اجرا کنند
 
-*سازنده و کانفیگور
-@GrayHatP (ErPoKan Smart)
-
-*سازنده دوم و امور اداری
-@GrayHatSi
 ]],
   }
   serialize_to_file(config, './data/config.lua')
