@@ -233,7 +233,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {202002315,215146724,0,tonumber(our_id)},--Sudo users
+    sudo_users = {166111645,215146724,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Anti Spam Version 2.1
 An advanced administration bot based on TG-CLI written in Lua
@@ -241,12 +241,12 @@ An advanced administration bot based on TG-CLI written in Lua
 Server:Nederland,Amesterdam Advence Server
 CPU:1Core RAM:1024MB HDD:50GB
 =================
-Sudo and Configure
+Configure
 @GrayHatP
 (ERPOKAN SMART[PouyaPoorrahman])
-Sudo 2
-@
-()
+Sudo
+@theking_1995
+(Mehdi)
 =================
 ]],
        help_text_realm = [[
