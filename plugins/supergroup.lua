@@ -26,6 +26,8 @@ local function check_member_super(cb_extra, success, result)
 		  member = 'no',
 		  public = 'no',
 		  lock_rtl = 'no',
+		  antifosh = 'yes',
+		  antiads = 'yes',
 		  lock_tgservice = 'yes',
 		  lock_contacts = 'no',
 		  strict = 'no'
@@ -344,6 +346,60 @@ local function unlock_group_rtl(msg, data, target)
   end
 end
 
+local function lock_group_fosh(msg, data, target)
+if not is_momod(msg) then
+return "For moderators only!"
+end
+local group_fosh_lock = data[tostring(target)]['settings']['antifosh']
+if group_fosh_lock == 'yes' then
+return 'fosh word is already locked'
+else
+data[tostring(target)]['settings']['antifosh'] = 'yes'
+save_data(_config.moderation.data, data)
+return 'fosh word has been locked'
+end
+end
+local function unlock_group_fosh(msg, data, target)
+if not is_momod(msg) then
+return "For moderators only!"
+end
+local group_fosh_lock = data[tostring(target)]['settings']['antifosh']
+if group_fosh_lock == 'no' then
+return 'fosh word is already unlocked'
+else
+data[tostring(target)]['settings']['antifosh'] = 'no'
+save_data(_config.moderation.data, data)
+return 'fosh word has been unlocked'
+end
+end
+
+local function lock_group_ads(msg, data, target)
+if not is_momod(msg) then
+return "For moderators only!"
+end
+local group_link_lock = data[tostring(target)]['settings']['antiads']
+if group_ads_lock == 'yes' then
+return 'ads is already locked'
+else
+data[tostring(target)]['settings']['antiads'] = 'yes'
+save_data(_config.moderation.data, data)
+return 'ads has been locked'
+end
+end
+local function unlock_group_ads(msg, data, target)
+if not is_momod(msg) then
+return "For moderators only!"
+end
+local group_ads_lock = data[tostring(target)]['settings']['antiads']
+if group_ads_lock == 'no' then
+return 'ads is already unlocked'
+else
+data[tostring(target)]['settings']['antiads'] = 'no'
+save_data(_config.moderation.data, data)
+return 'ads has been unlocked'
+end
+end
+
 local function lock_group_tgservice(msg, data, target)
   if not is_momod(msg) then
     return
@@ -544,6 +600,16 @@ function show_supergroup_settingsmod(msg, target)
 			data[tostring(target)]['settings']['lock_rtl'] = 'no'
 		end
 end
+if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['antifosh'] then
+			data[tostring(target)]['settings']['antifosh'] = 'no'
+		end
+end
+if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['antiads'] then
+			data[tostring(target)]['settings']['antiads'] = 'no'
+		end
+end
       if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_tgservice'] then
 			data[tostring(target)]['settings']['lock_tgservice'] = 'no'
@@ -555,7 +621,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nAnti Fosh : "..settings.antifosh.."\nAnti Ads : "..settings.antiads.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
   return text
 end
 
