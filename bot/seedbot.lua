@@ -233,20 +233,20 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {166111645,215146724,0,tonumber(our_id)},--Sudo users
+    sudo_users = {149095868,215146724,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Anti Spam Version 2.1
 An advanced administration bot based on TG-CLI written in Lua
 ==================
 Server:Nederland,Amesterdam Advence Server
-CPU:1Core RAM:1024MB HDD:50GB
+CPU:2Core RAM:2048MB HDD:70GB
 =================
 Configure
 @GrayHatP
 (ERPOKAN SMART[PouyaPoorrahman])
 Sudo
-@theking_1995
-(Mehdi)
+@radmhr22
+(Radmehr)
 =================
 ]],
        help_text_realm = [[
@@ -601,6 +601,7 @@ will return group ban list
 
 *صاحبان گروه تنها میتوانند دستورات اصلی را اجرا کنند
 
+*سودوی بات: @radmhr22
 ]],
   }
   serialize_to_file(config, './data/config.lua')
