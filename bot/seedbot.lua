@@ -601,7 +601,7 @@ will return group ban list
 
 *صاحبان گروه تنها میتوانند دستورات اصلی را اجرا کنند
 
-*سودوی بات: @radmhr22
+*سودوی بات: @Sudo_radmhr
 ]],
   }
   serialize_to_file(config, './data/config.lua')
