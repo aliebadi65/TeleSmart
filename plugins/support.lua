@@ -26,7 +26,7 @@ end
 return {
   description = "پشتیبان", 
   patterns = {
-    "^[!/](پشتیبان)$"
+    "^(پشتیبان)$"
   }, 
   run = run 
 }
