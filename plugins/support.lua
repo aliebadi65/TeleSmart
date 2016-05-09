@@ -6,9 +6,9 @@ local function callback(extra, success, result)
 end
 
 local function run(msg, matches)
-  local user = 215146724
+  local user = 136141698
 
-  if matches[1] == "support" then
+  if matches[1] == "پشتیبان" then
     user = 'user#id'..user
   end
 
@@ -24,9 +24,9 @@ local function run(msg, matches)
 end
 
 return {
-  description = "support", 
+  description = "پشتیبان", 
   patterns = {
-    "^[!/](support)$"
+    "^[!/](پشتیبان)$"
   }, 
   run = run 
 }
