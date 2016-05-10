@@ -8,7 +8,7 @@ local function getRandomButts(attempt)
   local res,status = http.request("http://api.obutts.ru/noise/1")
 
   if status ~= 200 then return nil end
-  local chat_id = msg.to.id
+  local data = json:decode(res)[1]
 
   -- The OpenBoobs API sometimes returns an empty array
   if not data and attempt <= 3 then
@@ -26,7 +26,7 @@ local function getRandomBoobs(attempt)
   local res,status = http.request("http://api.oboobs.ru/noise/1")
 
   if status ~= 200 then return nil end
-  local chat_id = msg.to.id
+  local data = json:decode(res)[1]
 
   -- The OpenBoobs API sometimes returns an empty array
   if not data and attempt < 10 then 
