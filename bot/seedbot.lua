@@ -233,7 +233,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {136141698,164005083},--Sudo users
+    sudo_users = {136141698,128838315,164005083},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Anti Spam Version 2.1
 An advanced administration bot based on TG-CLI written in Lua
