@@ -7,16 +7,16 @@ local mina = 136141698
         if msg.from.id == tonumber(mina) then 
            text = text..'هوووووی چیکار به عشقم رقیه داری چشمات رو ببند برو گم شو عبضی \n\n'
          elseif is_admin2(msg.from.id) then
-           text = text..'رقیه \n\n'
+           text = text..'هوووووی چیکار به عشقم رقیه داری چشمات رو ببند برو گم شو عبضی \n \n\n'
          elseif is_owner2(msg.from.id, msg.to.id) then
-           text = text..'رقیه \n\n'
+           text = text..'هوووووی چیکار به عشقم رقیه داری چشمات رو ببند برو گم شو عبضی \n \n\n'
          elseif is_momod2(msg.from.id, msg.to.id) then
-           text = text..'رقیه \n'
+           text = text..'هوووووی چیکار به عشقم رقیه داری چشمات رو ببند برو گم شو عبضی \n \n'
      else
-           text = text..'رقیه\n\n'
+           text = text..'هوووووی چیکار به عشقم رقیه داری چشمات رو ببند برو گم شو عبضی \n\n\n'
       end
       else
-       text = text..'رقیه '..value..'  \n\n'
+       text = text..'هوووووی چیکار به عشقم رقیه داری چشمات رو ببند برو گم شو عبضی \n '..value..'  \n\n'
      end
 return text
     
