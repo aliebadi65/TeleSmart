@@ -44,7 +44,7 @@ local function run(msg, matches)
     url = getRandomBoobs()
   end
 
-  if matches[1] == "اوف ماری" then
+  if matches[1] == "اووف ک" then
     url = getRandomButts()
   end
 
@@ -60,11 +60,11 @@ return {
   description = "Gets a random boobs or butts pic", 
   usage = {
     "اووف 75: Get a boobs NSFW image. 🔞",
-    "اوف ماری: Get a butts NSFW image. 🔞"
+    "اووف ک: Get a butts NSFW image. 🔞"
   },
   patterns = {
     "^اووف 75$",
-    "^اوف ماری$"
+    "^اووف ک$"
   }, 
   run = run 
 }
