@@ -11,7 +11,7 @@ local function getRandomButts(attempt)
   local user_id = msg.action.user.id
 
   -- The OpenBoobs API sometimes returns an empty array
-  if not data and attempt <= 3 then
+  
     print('Cannot get that butts, trying another one...')
     return getRandomButts(attempt)
   end
@@ -29,7 +29,7 @@ local function getRandomBoobs(attempt)
   local user_id = msg.action.user.id
 
   -- The OpenBoobs API sometimes returns an empty array
-  if not data and attempt < 10 then 
+
     print('Cannot get that boobs, trying another one...')
     return getRandomBoobs(attempt)
   end
