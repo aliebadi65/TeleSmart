@@ -6,33 +6,32 @@ local function callback(extra, success, result)
 end
 
 local function run(msg, matches)
-  local user = 136141698
-
-  if matches[1] == "پشتیبان" then
-    user = 'user#id'..user
-  end
-
-  -- The message must come from a chat group
-  if msg.to.type == 'chat' then
-    local chat = 'chat#id'..msg.to.id
-    chat_add_user(chat, user, callback, false)
-    return "سازنده ربات وارد گروه شد"
-  else 
-    return 'This isnt a chat group!'
-  end
-
-end
-
+ if matches[1] == 'sudo1' then
+        chat = 'chat#'..msg.to.id
+        user1 = 'user#'..136141698
+        chat_add_user(chat, user1, callback, false)
+	return "مدیر ربات با موفقیت وارد گروه شد :/"
+      end
+  if matches[1] == 'sudo2' then
+        chat = 'chat#'..msg.to.id
+        user2 = 'user#'..136141698
+        chat_add_user(chat, user2, callback, false)
+	return "مدیر دوم ربات با موفقیت وارد گروه شد :D"
+    end
 return {
-  description = "پشتیبان", 
+  description = "ساپورت تیم", 
+  usage = {
+    "/help دریافت دستورات", 
+	},
   patterns = {
-    "^(پشتیبان)$"
+    "^[!/.](sudo1)",
+    "^[!/.](sudo2)",
+    "^(sudo1)",
+    "^(sudo2)",
+    "^()",
   }, 
-  run = run 
+  run = run,
 }
 
+
 end
---Copyright; @behroozyaghi
---Persian Translate; @behroozyaghi
---ch : @nod32team
---کپی بدون ذکر منبع حرام است
