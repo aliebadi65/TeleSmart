@@ -19,14 +19,14 @@ local function check_member_super(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.title, '_', ' '),
 		  lock_arabic = 'no',
-		  lock_link = "no",
+		  lock_link = "yes",
           flood = 'yes',
 		  lock_spam = 'yes',
 		  lock_sticker = 'no',
 		  member = 'no',
-		  public = 'no',
+		  public = 'yes',
 		  lock_rtl = 'no',
-		  antifosh = 'yes',
+		  antifosh = 'no',
 		  antiads = 'yes',
 		  lock_tgservice = 'yes',
 		  lock_contacts = 'no',
@@ -587,7 +587,7 @@ function show_supergroup_settingsmod(msg, target)
         	NUM_MSG_MAX = tonumber(data[tostring(target)]['settings']['flood_msg_max'])
         	print('custom'..NUM_MSG_MAX)
       	else
-        	NUM_MSG_MAX = 5
+        	NUM_MSG_MAX = 10
       	end
     end
 	if data[tostring(target)]['settings'] then
